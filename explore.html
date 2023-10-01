@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Explore</title>
+  <style>
+    body {
+      background-image: url("abc.jpg");
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: 100% 100%;
+    }
+
+    img {
+      height: 250px;
+      width: 350px;
+    }
+
+    #button {
+      height: 50px;
+      width: 200px;
+      position: absolute;
+      top: 1050px;
+      left: 43%;
+      border-radius: 10px;
+      border: 10px solid rgba(215, 46, 231, 0.655);
+      color: #7909d4;
+      background-color: aqua;
+    }
+
+    .loader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: white;
+      transition: opacity 2s, visibility 1.5s;
+    }
+
+    .loader-hidden {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    .loader::after {
+      content: "";
+      width: 75px;
+      height: 75px;
+      border: 15px solid #dddddd;
+      border-top-color: #18e430;
+      border-bottom-color: #581093;
+      border-left-color: blue;
+      border-right-color: red;
+      border-radius: 100%;
+      animation: loading 0.75s ease infinite;
+    }
+
+    @keyframes loading {
+      from {
+        transform: rotate(0turn);
+      }
+
+      to {
+        transform: rotate(1turn);
+      }
+    }
+
+    #per {
+      background-image: url(bg2.jpg);
+      position: absolute;
+      height: 500px;
+      width: 800px;
+      top: 530px;
+      left: 350px
+    }
+
+    #upper {
+
+      background-image: url(bg1.jpeg);
+      color: rgb(255, 255, 255);
+      position: absolute;
+      height: 280px;
+      width: 1500px;
+      top: 120px;
+      border-radius: 30px;
+      border: 10px solid rgb(8, 16, 49);
+    }
+
+    #cer1 {
+      background-color: rgba(6, 3, 79, 0.756);
+      position: absolute;
+      height: 300px;
+      width: 1520px;
+      top: 1200px;
+      border-radius: 30px;
+    }
+
+    #cer2 {
+      background-color: rgba(6, 3, 79, 0.756);
+      position: absolute;
+      height: 300px;
+      width: 1520px;
+      top: 1600px;
+      border-radius: 30px;
+    }
+
+    #cer3 {
+      background-color: rgba(6, 3, 79, 0.756);
+      position: absolute;
+      height: 300px;
+      width: 1520px;
+      top: 2000px;
+      border-radius: 30px;
+    }
+
+    #cer4 {
+      background-color: rgba(6, 3, 79, 0.756);
+      position: absolute;
+      height: 300px;
+      width: 1520px;
+      top: 2400px;
+      border-radius: 30px;
+    }
+
+    #cer5 {
+      background-color: rgba(6, 3, 79, 0.756);
+      position: absolute;
+      height: 300px;
+      width: 1520px;
+      top: 2800px;
+      border-radius: 30px;
+    }
+
+    #cer6 {
+      background-color: rgba(6, 3, 79, 0.756);
+      position: absolute;
+      height: 300px;
+      width: 1520px;
+      top: 3200px;
+      border-radius: 30px;
+    }
+
+    #cer7 {
+      background-color: rgba(6, 3, 79, 0.756);
+      position: absolute;
+      height: 300px;
+      width: 1520px;
+      top: 3600px;
+      border-radius: 30px;
+    }
+
+    #cer8 {
+      background-color: rgba(6, 3, 79, 0.756);
+      position: absolute;
+      height: 300px;
+      width: 1520px;
+      top: 4000px;
+      border-radius: 30px;
+    }
+
+    #cer9 {
+      background-color: rgba(6, 3, 79, 0.756);
+      position: absolute;
+      height: 300px;
+      width: 1520px;
+      top: 4400px;
+      border-radius: 30px;
+    }
+
+    .box1 {
+      border: 10px solid green;
+      position: absolute;
+      height: 250px;
+      width: 350px;
+      top: 18px;
+      right: 100px;
+      border-radius: 15px;
+    }
+
+    .box2 {
+      border: 10px solid green;
+      position: absolute;
+      height: 250px;
+      width: 350px;
+      top: 0px;
+      right: -750px;
+      border-radius: 15px;
+
+    }
+
+    .box3 {
+      border: 10px solid green;
+      position: absolute;
+      height: 250px;
+      width: 350px;
+      top: 0px;
+      right: -560px;
+      border-radius: 15px;
+    }
+
+    .box4 {
+      border: 10px solid green;
+      position: absolute;
+      height: 250px;
+      width: 350px;
+      top: 0px;
+      right: -850px;
+      border-radius: 15px;
+    }
+
+    .box5 {
+      border: 10px solid green;
+      position: absolute;
+      height: 250px;
+      width: 350px;
+      top: 0px;
+      right: -865px;
+      border-radius: 15px;
+    }
+
+    .box6 {
+      border: 10px solid green;
+      position: absolute;
+      height: 250px;
+      width: 350px;
+      top: 0px;
+      right: -850px;
+      border-radius: 15px;
+    }
+
+    .box7 {
+      border: 10px solid green;
+      position: absolute;
+      height: 250px;
+      width: 350px;
+      top: 0px;
+      right: -590px;
+      border-radius: 15px;
+    }
+
+    .box8 {
+      border: 10px solid green;
+      position: absolute;
+      height: 250px;
+      width: 350px;
+      top: 0px;
+      right: -700px;
+      border-radius: 15px;
+    }
+
+    .box9 {
+      border: 10px solid green;
+      position: absolute;
+      height: 250px;
+      width: 350px;
+      top: 0px;
+      right: -815px;
+      border-radius: 15px;
+    }
+
+    .oval {
+      height: 220px;
+      width: 220px;
+      border-radius: 360px;
+      border: 0.5rem solid #21dfed;
+      position: absolute;
+      top: 50px;
+      left: 480px;
+    }
+    #arrowAnim {
+  width: 90vw;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.arrow {
+  width: 1vw;
+  height: 1vw;
+  border: 2.5vw solid;
+  border-color: rgb(255, 255, 255) transparent transparent rgb(0, 0, 0);
+  transform: rotate(-45deg);
+}
+
+
+.arrowSliding {
+  position: absolute;
+  top: 4820px;
+  right:770px;
+  -webkit-animation: slide 4s linear infinite; 
+          animation: slide 4s linear infinite;
+}
+
+.delay1 {
+  -webkit-animation-delay: 1s; 
+    animation-delay: 1s;
+}
+.delay2 {
+  -webkit-animation-delay: 2s; 
+    animation-delay: 2s;
+}
+.delay3 {
+  -webkit-animation-delay: 3s; 
+    animation-delay: 3s;
+}
+
+@-webkit-keyframes slide {
+    0% { opacity:0; transform: translateX(15vw); }	
+   20% { opacity:1; transform: translateX(9vw); }	
+   80% { opacity:1; transform: translateX(-9vw); }	
+  100% { opacity:0; transform: translateX(-15vw); }	
+}
+@keyframes slide {
+    0% { opacity:0; transform: translateX(15vw); }	
+   20% { opacity:1; transform: translateX(9vw); }	
+   80% { opacity:1; transform: translateX(-9vw); }	
+  100% { opacity:0; transform: translateX(-15vw); }	
+}
+.main{
+        width: 100vw;
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 1fr;
+        place-items: center;
+    }
+ 
+    .btn {
+        padding: 0.5em 1em;
+        background-color: #0ebac5;
+        border: none;
+        user-select: none;
+        cursor: pointer;
+        font-size: 20px;
+        text-transform: uppercase;
+        transition: all 0.5s linear;
+        color: #fff;
+        position: relative;
+        box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    }
+ 
+    .btn:hover::after, .btn:hover::before {
+        content: '';
+        background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+ 
+        animation: move-right-side 1s ease infinite;
+    }
+ 
+    .btn:hover::before {
+        background: linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%);
+        inset: 0;
+        animation: move-left-side 1s ease infinite;
+        z-index: -2;
+    }
+ 
+    .btn:hover {
+        background-color: #fff;
+        color: #00C9FF;
+    }
+ 
+    @keyframes move-right-side {
+        0% {
+            inset: 0.3em 0 0 0.3em;
+        }
+ 
+        33% {
+            inset: 0 0.3em 0.3em 0;
+        }
+            
+        66% {
+            inset: 1em 0 0 0.5em;
+        }
+ 
+        100% {
+            inset:0  1em 0.5em 0;
+        }
+    }
+ 
+    @keyframes move-left-side {
+        0% {
+            right: -1em;
+            top: -0.5em;
+        }
+ 
+        33% {
+            bottom: -1em;
+            left: -0.5em;
+        }
+ 
+        66% {
+            top: 0;
+            right:-0.7;
+        }
+ 
+        100% {
+            right: -1em;
+            top: -0.5em;
+        }
+    }
+  </style>
+</head>
+
+<body>
+  <h1 style="color: white;
+  font-size: 50px;
+  background-image: url(bg1.jpeg);
+      background-size: cover;
+      background-position: center;
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;">
+    <center>
+      Why This Website??</center>
+  </h1>
+  <div id="upper">
+    <h4 style="font-size: large;
+        position: absolute;
+        top:11px;
+        left:20px;
+        right: 20px;
+        font-family: Arial, Helvetica, sans-serif;">
+      Welcome to my personal website, a digital gateway into my world of
+      exploration, learning, and growth. I am thrilled to have you here as I embark on the journey of my third year as a
+      student. This virtual space is more than just a website; it's a reflection of my experiences, passions, and
+      aspirations.
+      Throughout my academic endeavors, I've had the privilege of delving into diverse subjects, engaging in fascinating
+      projects, and forging meaningful connections with fellow scholars. As I enter my third year, I'm excited to share
+      with you the insights I've gained, the skills I've honed, and the dreams I'm pursuing.
+      This website serves as a window into my academic pursuits, extracurricular activities, and personal interests.
+      You'll find a collection of my academic achievements, research endeavors, and the courses that have shaped my
+      intellectual journey. Additionally, I'll provide glimpses into my extracurricular involvement, community
+      engagement, and the causes that ignite my passion for positive change.
+      As a student, I understand the significance of continuous growth and adaptability. This website is not just a
+      static representation but a dynamic platform where you can follow my progress, engage in discussions, and witness
+      my evolution as a learner and a contributor to the world around me.
+      Thank you for joining me on this adventure through the pages of my personal website. Whether you're here to
+      explore my academic pursuits, share in my passions, or simply connect, I'm excited to have you along for the ride.
+      Let's embrace the opportunities of this third year together and make the most of this incredible academic journey.
+    </h4>
+  </div>
+  <h1 style="color: white;
+    position: absolute;
+    top:430px;
+    left:40%">
+    <center style="font-size:40px ;
+    color: rgb(0, 0, 0);">Personal Information</center>
+  </h1>
+  <div id="per">
+    <h2 style="color: azure;position: absolute;
+        left:15px;right: 15px;">
+      HELLO!! Everyone My Name is Vaibhav khandelwal.<br><br>
+      I am Currently Persuing Btech in<br> Information Technology From<br> Lovely Professional University.<br><br>
+      Birth date : 15-Oct-2003<br><br>
+      Persuing Specialization : Cyber Security.<br><br>
+      10th and 10+2 Passed From Railway Senior Secondary School with 80% and 83%.<br><br>
+      Current CGPA in Btech : 7.3.<br><br>
+      Download the Resume Click on Download.
+    </h2>
+    <img class="oval" src="self1.png">
+  </div>
+  <a href="Vaibhav khandelwal.pdf" download="Resume.Vaibhavkhandelwal.pdf">
+    <button id="button">
+      <b>
+        <h3 style="position: absolute;
+            top:-10px;
+            left:45px">
+          Download
+        </h3>
+      </b>
+    </button>
+  </a>
+
+
+  <h1 style="color: rgb(0, 0, 0);
+    position: absolute;
+    top:1090px">Certificates and related learned skills</h1>
+  </center>
+  <div id="cer1">
+    <h2 style="color: white;
+        position: absolute;
+        left:15px"><u style="color:greenyellow;">EC Council-Ethical Hacking Essentials Certificate From Coursera</u>
+      <br><br>Skills learned =><br>
+      Cybersecurity Attack and Defense Fundamentals<br><br>
+      Ethical Hacking Theory with practical Info<br><br>
+      Some Examples : Information security threats and vulnerabilities, types of malwares.<br>
+      Network-level attacks, SQL injection, denial-of-service, and session hijacking.
+    </h2>
+    <div class="box1">
+      <img src="cer1.png">
+    </div>
+  </div>
+  <div id="cer2">
+    <h2 style="color: white;
+      position: absolute;
+      left:15px"><u style="color:greenyellow;">DSA-SELF PLACED From GEEKS FOR GEEKS</u>
+      <br><br>Skills learned =><br>
+      All basics about types of data-structures.<br><br>
+      Ex. Linear and Non-Linear,Dynamic Programming and Hashing<br><br>
+      For checking my Projects you can visit my Github account.
+
+      <div class="box2">
+        <img src="cer2.png">
+      </div>
+  </div>
+  <div id="cer3">
+    <h2 style="color: white;
+      position: absolute;
+      left:15px"><u style="color:greenyellow;">EC Council-Network Defense Essentials Certification From Coursera</u>
+      <br><br>Skills learned =><br>
+      Network security assessment techniques and tools.<br><br>
+      Computer forensics fundaments, digital evidence, and forensic investigation phases.<br><br>
+      Network Defense
+      <div class="box3">
+        <img src="cer3.png">
+      </div>
+  </div>
+  <div id="cer4">
+    <h2 style="color: white;
+      position: absolute;
+      left:15px"><u style="color:greenyellow;"> GOOGLE IT-SUPPPORT Certification From Coursera</u>
+      <br><br>Skills learned =><br>
+      Debugging<br>
+      Encryption Algorithms and Techniques<br>
+      Customer Service<br>
+      Network Protocols<br>
+      Cloud Computing<br>
+      <div class="box4">
+        <img src="cer4.png">
+      </div>
+  </div>
+  <div id="cer5">
+    <h2 style="color: white;
+      position: absolute;
+      left:15px"><u style="color:greenyellow;">GOOGLE IT-SECURITY Certification From Coursera</u>
+      <br><br>Skills learned =><br><br>
+      Network Security<br>
+      Cryptography<br>
+      Wireless Security<br>
+      Cybersecurity
+      <div class="box5">
+        <img src="cer5.png">
+      </div>
+  </div>
+  <div id="cer6">
+    <h2 style="color: white;
+      position: absolute;
+      left:15px"><u style="color:greenyellow;">GOOGLE Operating System Certication From Coursera</u>
+      <br><br>Skills learned =><br><br>
+      Powershell<br>  
+      Linux File Systems<br>
+      Linux<br>
+      Command-Line Interface
+      <div class="box6">
+        <img src="cer6.png">
+      </div>
+  </div>
+  <div id="cer7">
+    <h2 style="color: white;
+      position: absolute;
+      left:15px"><u style="color:greenyellow;">GOOGLE System Adinistration and IT Infrastructure Certication From
+        Coursera</u>
+      <br><br>Skills learned =><br>
+      Directory Service-network and Infrastructure Service<br><br>
+      Lightweight Directory Access Protocol (LDAP)<br><br>
+      Backup-Data Recovery and Backups
+      <div class="box7">
+        <img src="cer7.png">
+      </div>
+  </div>
+  <div id="cer8">
+    <h2 style="color: white;
+      position: absolute;
+      left:15px"><u style="color:greenyellow;">GOOGLE Technical Support Fundamentals Certication From Coursera</u>
+      <br><br>Skills learned =><br><br>
+      Binary Code-Hardware based<br>
+      Customer Support<br>
+      Linux-Operating System<br>
+      Troubleshooting
+
+      <div class="box8">
+        <img src="cer8.png">
+      </div>
+  </div>
+  <div id="cer9">
+    <h2 style="color: white;
+      position: absolute;
+      left:15px"><u style="color:greenyellow;">GOOGLE Computer Networking Certication From Coursera</u>
+      <br><br>Skills learned =><br><br>
+      Domain Name System (DNS)<br>
+      Ipv4-the network layer<br>
+      Network Model-Network services<br>
+      Troubleshooting
+      <div class="box9">
+        <img src="cer9.png">
+      </div>
+  </div>
+  <div id="arrowAnim">
+    <div class="arrowSliding">
+      <div class="arrow"></div>
+    </div>
+    <div class="arrowSliding delay1">
+      <div class="arrow"></div>
+    </div>
+    <div class="arrowSliding delay2">
+      <div class="arrow"></div>
+    </div>
+    <div class="arrowSliding delay3">
+      <div class="arrow"></div>
+    </div>
+  </div>
+<div style="border: 10px solid rgb(174, 223, 27);
+background-color: white;
+position: absolute;
+top:4800px;
+width:400px;
+height: 100px;
+left: 1000px;">
+<h3 style="position: absolute;
+top: -21px;
+left:5px;
+font-family: 'Courier New', Courier, monospace;
+font-size: 18px;">
+  If you want to contact me or see my repository/projects visit Main page through contact mediums I am open to connect. <br> Thanks For Visiting..
+</h3>
+</div>
+<a href="http://127.0.0.1:5500/main.html"><button class="btn" style="
+height: 60px; 
+      width: 230px; 
+      position: absolute;
+top: 4830px;
+left: 150px;"><b>Main Page</b></button></a>
+
+  <div class="loader"></div>
+</body>
+<script>
+  window.addEventListener("load", () => {
+    const loader = document.querySelector(".loader");
+    loader.classList.add("loader-hidden");
+    loader.addEventListener("transitionend", () => {
+      document.body.removeChild("loader");
+    })
+  })
+
+</script>
+
+</html>
