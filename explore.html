@@ -3,6 +3,8 @@
 
 <head>
   <title>Explore</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
   <style>
     body {
       background-image: url("abc.jpg");
@@ -17,15 +19,65 @@
     }
 
     #button {
-      height: 50px;
-      width: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 0 10px;
+      color: white;
+      text-shadow: 2px 2px rgb(116, 116, 116);
+      text-transform: uppercase;
+      border: solid 3px black;
+      letter-spacing: 1px;
+      font-weight: 600;
+      font-size: 17px;
+      background-color: hsl(49deg 98% 60%);
+      border-radius: 50px;
+      position: relative;
+      overflow: hidden;
+      transition: all .5s ease;
       position: absolute;
-      top: 1050px;
-      left: 43%;
-      border-radius: 10px;
-      border: 10px solid rgba(215, 46, 231, 0.655);
-      color: #7909d4;
-      background-color: aqua;
+      top: 1060px;
+      left: 650px;
+    }
+
+    #button:active {
+      transform: scale(.9);
+      transition: all 100ms ease;
+    }
+
+    #button svg {
+      transition: all .5s ease;
+      z-index: 2;
+    }
+
+    #button .play {
+      transition: all .5s ease;
+      transition-delay: 200ms;
+    }
+
+    #button:hover svg {
+      transform: scale(3) translate(50%);
+    }
+
+    #button .now {
+      position: absolute;
+      left: 0;
+      transform: translateX(-100%);
+      transition: all .5s ease;
+      z-index: 2;
+      color: #000000;
+
+    }
+
+    #button:hover .now {
+      transform: translateX(10px);
+      transition-delay: 300ms;
+    }
+
+    #button:hover .play {
+      transform: translateX(200%);
+      transition-delay: 200ms;
     }
 
     .loader {
@@ -91,7 +143,7 @@
     }
 
     #cer1 {
-      background-color: rgba(6, 3, 79, 0.756);
+      background-color: rgb(255, 255, 255);
       position: absolute;
       height: 300px;
       width: 1520px;
@@ -109,7 +161,7 @@
     }
 
     #cer3 {
-      background-color: rgba(6, 3, 79, 0.756);
+      background-color: rgb(13, 14, 29);
       position: absolute;
       height: 300px;
       width: 1520px;
@@ -118,7 +170,7 @@
     }
 
     #cer4 {
-      background-color: rgba(6, 3, 79, 0.756);
+      background-color: #fde7fff7;
       position: absolute;
       height: 300px;
       width: 1520px;
@@ -136,7 +188,7 @@
     }
 
     #cer6 {
-      background-color: rgba(6, 3, 79, 0.756);
+      background-color: #284B4D;
       position: absolute;
       height: 300px;
       width: 1520px;
@@ -154,7 +206,7 @@
     }
 
     #cer8 {
-      background-color: rgba(6, 3, 79, 0.756);
+      background-color: rgb(238, 250, 254);
       position: absolute;
       height: 300px;
       width: 1520px;
@@ -168,6 +220,24 @@
       height: 300px;
       width: 1520px;
       top: 4400px;
+      border-radius: 30px;
+    }
+
+    #cer10 {
+      background-color: rgba(2, 15, 40, 0.895);
+      position: absolute;
+      height: 300px;
+      width: 1520px;
+      top: 4800px;
+      border-radius: 30px;
+    }
+
+    #cer11 {
+      background-color: rgba(81, 164, 177, 0.991);
+      position: absolute;
+      height: 300px;
+      width: 1520px;
+      top: 5200px;
       border-radius: 30px;
     }
 
@@ -198,7 +268,7 @@
       height: 250px;
       width: 350px;
       top: 0px;
-      right: -560px;
+      right: -700px;
       border-radius: 15px;
     }
 
@@ -262,6 +332,25 @@
       border-radius: 15px;
     }
 
+    .box10 {
+      border: 10px solid green;
+      position: absolute;
+      height: 250px;
+      width: 350px;
+      top: 0px;
+      right: -735px;
+      border-radius: 15px;
+    }
+    .box11 {
+      border: 10px solid green;
+      position: absolute;
+      height: 250px;
+      width: 350px;
+      top: 0px;
+      right: -505px;
+      border-radius: 15px;
+    }
+
     .oval {
       height: 220px;
       width: 220px;
@@ -271,140 +360,179 @@
       top: 50px;
       left: 480px;
     }
+
     #arrowAnim {
-  width: 90vw;
-  height: 60vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.arrow {
-  width: 1vw;
-  height: 1vw;
-  border: 2.5vw solid;
-  border-color: rgb(255, 255, 255) transparent transparent rgb(0, 0, 0);
-  transform: rotate(-45deg);
-}
-
-
-.arrowSliding {
-  position: absolute;
-  top: 4820px;
-  right:770px;
-  -webkit-animation: slide 4s linear infinite; 
-          animation: slide 4s linear infinite;
-}
-
-.delay1 {
-  -webkit-animation-delay: 1s; 
-    animation-delay: 1s;
-}
-.delay2 {
-  -webkit-animation-delay: 2s; 
-    animation-delay: 2s;
-}
-.delay3 {
-  -webkit-animation-delay: 3s; 
-    animation-delay: 3s;
-}
-
-@-webkit-keyframes slide {
-    0% { opacity:0; transform: translateX(15vw); }	
-   20% { opacity:1; transform: translateX(9vw); }	
-   80% { opacity:1; transform: translateX(-9vw); }	
-  100% { opacity:0; transform: translateX(-15vw); }	
-}
-@keyframes slide {
-    0% { opacity:0; transform: translateX(15vw); }	
-   20% { opacity:1; transform: translateX(9vw); }	
-   80% { opacity:1; transform: translateX(-9vw); }	
-  100% { opacity:0; transform: translateX(-15vw); }	
-}
-.main{
-        width: 100vw;
-        height: 100vh;
-        display: grid;
-        grid-template-columns: 1fr;
-        place-items: center;
+      width: 90vw;
+      height: 60vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
- 
+
+    .arrow {
+      width: 1vw;
+      height: 1vw;
+      border: 2vw solid;
+      border-color: rgb(255, 255, 255) transparent transparent rgb(0, 0, 0);
+      transform: rotate(-45deg);
+    }
+
+
+    .arrowSliding {
+      position: absolute;
+      top: 5620px;
+      right: 820px;
+      -webkit-animation: slide 4s linear infinite;
+      animation: slide 4s linear infinite;
+    }
+
+    .delay1 {
+      -webkit-animation-delay: 1s;
+      animation-delay: 1s;
+    }
+
+    .delay2 {
+      -webkit-animation-delay: 2s;
+      animation-delay: 2s;
+    }
+
+    .delay3 {
+      -webkit-animation-delay: 3s;
+      animation-delay: 3s;
+    }
+
+    @-webkit-keyframes slide {
+      0% {
+        opacity: 0;
+        transform: translateX(15vw);
+      }
+
+      20% {
+        opacity: 1;
+        transform: translateX(9vw);
+      }
+
+      80% {
+        opacity: 1;
+        transform: translateX(-9vw);
+      }
+
+      100% {
+        opacity: 0;
+        transform: translateX(-15vw);
+      }
+    }
+
+    @keyframes slide {
+      0% {
+        opacity: 0;
+        transform: translateX(15vw);
+      }
+
+      20% {
+        opacity: 1;
+        transform: translateX(9vw);
+      }
+
+      80% {
+        opacity: 1;
+        transform: translateX(-9vw);
+      }
+
+      100% {
+        opacity: 0;
+        transform: translateX(-15vw);
+      }
+    }
+
+    .main {
+      width: 100vw;
+      height: 100vh;
+      display: grid;
+      grid-template-columns: 1fr;
+      place-items: center;
+    }
+
     .btn {
-        padding: 0.5em 1em;
-        background-color: #0ebac5;
-        border: none;
-        user-select: none;
-        cursor: pointer;
-        font-size: 20px;
-        text-transform: uppercase;
-        transition: all 0.5s linear;
-        color: #fff;
-        position: relative;
-        box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+      padding: 0.5em 1em;
+      background-color: #19e3c5;
+      border: none;
+      user-select: none;
+      cursor: pointer;
+      font-size: 20px;
+      text-transform: uppercase;
+      transition: all 0.5s linear;
+      color: #1257ec;
+      position: relative;
+      box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+      border: 2px solid black;
+      border-radius: 5px;
     }
- 
-    .btn:hover::after, .btn:hover::before {
-        content: '';
-        background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%);
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        inset: 0;
-        z-index: -1;
- 
-        animation: move-right-side 1s ease infinite;
-    }
- 
+
+    .btn:hover::after,
     .btn:hover::before {
-        background: linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%);
-        inset: 0;
-        animation: move-left-side 1s ease infinite;
-        z-index: -2;
+      content: '';
+      background: linear-gradient(90deg, #f346fc 0%, #3F5EFB 100%);
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      border-radius: 5px;
+
+      animation: move-right-side 1s ease infinite;
     }
- 
+
+    .btn:hover::before {
+      background: linear-gradient(90deg, #0bcaff 0%, #92FE9D 100%);
+      inset: 0;
+      animation: move-left-side 1s ease infinite;
+      z-index: -2;
+    }
+
     .btn:hover {
-        background-color: #fff;
-        color: #00C9FF;
+      background-color: #fff;
+      color: #00C9FF;
     }
- 
+
     @keyframes move-right-side {
-        0% {
-            inset: 0.3em 0 0 0.3em;
-        }
- 
-        33% {
-            inset: 0 0.3em 0.3em 0;
-        }
-            
-        66% {
-            inset: 1em 0 0 0.5em;
-        }
- 
-        100% {
-            inset:0  1em 0.5em 0;
-        }
+      0% {
+        inset: 0.3em 0 0 0.3em;
+      }
+
+      33% {
+        inset: 0 0.3em 0.3em 0;
+      }
+
+      66% {
+        inset: 0.5em 0 0 0.5em;
+      }
+
+      100% {
+        inset: 0 1em 0.5em 0;
+      }
     }
- 
+
     @keyframes move-left-side {
-        0% {
-            right: -1em;
-            top: -0.5em;
-        }
- 
-        33% {
-            bottom: -1em;
-            left: -0.5em;
-        }
- 
-        66% {
-            top: 0;
-            right:-0.7;
-        }
- 
-        100% {
-            right: -1em;
-            top: -0.5em;
-        }
+      0% {
+        right: -1em;
+        top: -0.5em;
+      }
+
+      33% {
+        bottom: -1em;
+        left: -0.5em;
+      }
+
+      66% {
+        top: 0;
+        right: -0.7;
+      }
+
+      100% {
+        right: -1em;
+        top: -0.5em;
+      }
     }
   </style>
 </head>
@@ -412,7 +540,7 @@
 <body>
   <h1 style="color: white;
   font-size: 50px;
-  background-image: url(bg1.jpeg);
+  background-image: url(b.gif);
       background-size: cover;
       background-position: center;
       background-clip: text;
@@ -469,13 +597,35 @@
   </div>
   <a href="Vaibhav khandelwal.pdf" download="Resume.Vaibhavkhandelwal.pdf">
     <button id="button">
-      <b>
-        <h3 style="position: absolute;
-            top:-10px;
-            left:45px">
-          Download
-        </h3>
-      </b>
+      <svg height="36px" width="36px" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
+        <rect fill="#fdd835" y="0" x="0" height="36" width="36"></rect>
+        <path
+          d="M38.67,42H11.52C11.27,40.62,11,38.57,11,36c0-5,0-11,0-11s1.44-7.39,3.22-9.59 c1.67-2.06,2.76-3.48,6.78-4.41c3-0.7,7.13-0.23,9,1c2.15,1.42,3.37,6.67,3.81,11.29c1.49-0.3,5.21,0.2,5.5,1.28 C40.89,30.29,39.48,38.31,38.67,42z"
+          fill="#e53935"></path>
+        <path
+          d="M39.02,42H11.99c-0.22-2.67-0.48-7.05-0.49-12.72c0.83,4.18,1.63,9.59,6.98,9.79 c3.48,0.12,8.27,0.55,9.83-2.45c1.57-3,3.72-8.95,3.51-15.62c-0.19-5.84-1.75-8.2-2.13-8.7c0.59,0.66,3.74,4.49,4.01,11.7 c0.03,0.83,0.06,1.72,0.08,2.66c4.21-0.15,5.93,1.5,6.07,2.35C40.68,33.85,39.8,38.9,39.02,42z"
+          fill="#b71c1c"></path>
+        <path
+          d="M35,27.17c0,3.67-0.28,11.2-0.42,14.83h-2C32.72,38.42,33,30.83,33,27.17 c0-5.54-1.46-12.65-3.55-14.02c-1.65-1.08-5.49-1.48-8.23-0.85c-3.62,0.83-4.57,1.99-6.14,3.92L15,16.32 c-1.31,1.6-2.59,6.92-3,8.96v10.8c0,2.58,0.28,4.61,0.54,5.92H10.5c-0.25-1.41-0.5-3.42-0.5-5.92l0.02-11.09 c0.15-0.77,1.55-7.63,3.43-9.94l0.08-0.09c1.65-2.03,2.96-3.63,7.25-4.61c3.28-0.76,7.67-0.25,9.77,1.13 C33.79,13.6,35,22.23,35,27.17z"
+          fill="#212121"></path>
+        <path
+          d="M17.165,17.283c5.217-0.055,9.391,0.283,9,6.011c-0.391,5.728-8.478,5.533-9.391,5.337 c-0.913-0.196-7.826-0.043-7.696-5.337C9.209,18,13.645,17.32,17.165,17.283z"
+          fill="#01579b"></path>
+        <path
+          d="M40.739,37.38c-0.28,1.99-0.69,3.53-1.22,4.62h-2.43c0.25-0.19,1.13-1.11,1.67-4.9 c0.57-4-0.23-11.79-0.93-12.78c-0.4-0.4-2.63-0.8-4.37-0.89l0.1-1.99c1.04,0.05,4.53,0.31,5.71,1.49 C40.689,24.36,41.289,33.53,40.739,37.38z"
+          fill="#212121"></path>
+        <path
+          d="M10.154,20.201c0.261,2.059-0.196,3.351,2.543,3.546s8.076,1.022,9.402-0.554 c1.326-1.576,1.75-4.365-0.891-5.267C19.336,17.287,12.959,16.251,10.154,20.201z"
+          fill="#81d4fa"></path>
+        <path
+          d="M17.615,29.677c-0.502,0-0.873-0.03-1.052-0.069c-0.086-0.019-0.236-0.035-0.434-0.06 c-5.344-0.679-8.053-2.784-8.052-6.255c0.001-2.698,1.17-7.238,8.986-7.32l0.181-0.002c3.444-0.038,6.414-0.068,8.272,1.818 c1.173,1.191,1.712,3,1.647,5.53c-0.044,1.688-0.785,3.147-2.144,4.217C22.785,29.296,19.388,29.677,17.615,29.677z M17.086,17.973 c-7.006,0.074-7.008,4.023-7.008,5.321c-0.001,3.109,3.598,3.926,6.305,4.27c0.273,0.035,0.48,0.063,0.601,0.089 c0.563,0.101,4.68,0.035,6.855-1.732c0.865-0.702,1.299-1.57,1.326-2.653c0.051-1.958-0.301-3.291-1.073-4.075 c-1.262-1.281-3.834-1.255-6.825-1.222L17.086,17.973z"
+          fill="#212121"></path>
+        <path
+          d="M15.078,19.043c1.957-0.326,5.122-0.529,4.435,1.304c-0.489,1.304-7.185,2.185-7.185,0.652 C12.328,19.467,15.078,19.043,15.078,19.043z"
+          fill="#e1f5fe"></path>
+      </svg>
+      <span class="now">now!</span>
+      <span class="play">Download</span>
     </button>
   </a>
 
@@ -485,15 +635,16 @@
     top:1090px">Certificates and related learned skills</h1>
   </center>
   <div id="cer1">
-    <h2 style="color: white;
+    <h2 style="color: rgb(0, 0, 0);
         position: absolute;
-        left:15px"><u style="color:greenyellow;">EC Council-Ethical Hacking Essentials Certificate From Coursera</u>
+        left:15px"><u style="color:rgb(3, 51, 122);">EC Council-Ethical Hacking Essentials Certificate From Coursera</u>
       <br><br>Skills learned =><br>
       Cybersecurity Attack and Defense Fundamentals<br><br>
       Ethical Hacking Theory with practical Info<br><br>
       Some Examples : Information security threats and vulnerabilities, types of malwares.<br>
       Network-level attacks, SQL injection, denial-of-service, and session hijacking.
     </h2>
+    <span style=" position:absolute;left :650px;top:-15px"><lottie-player src="https://lottie.host/8151d18c-9c5c-4d32-ae55-6c6cae11c70d/2S03Gn2vbb.json" background-color="transparent"  speed="1" style="width: 300px; height: 300px;" loop autoplay></lottie-player></span>
     <div class="box1">
       <img src="cer1.png">
     </div>
@@ -506,6 +657,7 @@
       All basics about types of data-structures.<br><br>
       Ex. Linear and Non-Linear,Dynamic Programming and Hashing<br><br>
       For checking my Projects you can visit my Github account.
+      <span style=" position:absolute;left :689px;top:-25px"><lottie-player src="https://lottie.host/3ea3b9f1-aa83-4499-b6ab-52f6bd1ffa05/2v5Asw5due.json" background-color="transparent"  speed="1" style="width: 300px; height: 300px;" loop autoplay></lottie-player></span>
 
       <div class="box2">
         <img src="cer2.png">
@@ -517,22 +669,26 @@
       left:15px"><u style="color:greenyellow;">EC Council-Network Defense Essentials Certification From Coursera</u>
       <br><br>Skills learned =><br>
       Network security assessment techniques and tools.<br><br>
-      Computer forensics fundaments, digital evidence, and forensic investigation phases.<br><br>
+      Computer forensics fundaments, digital evidence,<br> and forensic investigation phases.<br><br>
       Network Defense
+      <span style=" position:absolute;left :650px;
+      top:-0px"><lottie-player src="https://lottie.host/f8d235b8-418a-417b-ab49-bd7441637580/37oBkxwTlJ.json" background-color="transparent"  speed="1" style="width: 300px; height: 300px;" loop autoplay></lottie-player></span>
       <div class="box3">
         <img src="cer3.png">
       </div>
   </div>
   <div id="cer4">
-    <h2 style="color: white;
+    <h2 style="color: rgb(0, 0, 0);
       position: absolute;
-      left:15px"><u style="color:greenyellow;"> GOOGLE IT-SUPPPORT Certification From Coursera</u>
+      left:15px"><u style="color:rgb(56, 89, 8);"> GOOGLE IT-SUPPPORT Certification From Coursera</u>
       <br><br>Skills learned =><br>
       Debugging<br>
       Encryption Algorithms and Techniques<br>
       Customer Service<br>
       Network Protocols<br>
       Cloud Computing<br>
+      <span style=" position:absolute;left :650px;
+      top:-0px"><lottie-player src="https://lottie.host/c6bb1691-f3de-46bb-8172-15ca39d14c45/OOgiQqIuLo.json" background-color="transparent"  speed="1" style="width: 300px; height: 300px;" loop autoplay></lottie-player></span>
       <div class="box4">
         <img src="cer4.png">
       </div>
@@ -546,6 +702,8 @@
       Cryptography<br>
       Wireless Security<br>
       Cybersecurity
+      <span style=" position:absolute;left :650px;
+      top:-20px"><lottie-player src="https://lottie.host/8292a0c4-b722-4c5a-9919-703b95e7573c/L4casKoL56.json" background-color="transparent"  speed="1" style="width: 300px; height: 300px;" loop autoplay></lottie-player></span>
       <div class="box5">
         <img src="cer5.png">
       </div>
@@ -555,10 +713,12 @@
       position: absolute;
       left:15px"><u style="color:greenyellow;">GOOGLE Operating System Certication From Coursera</u>
       <br><br>Skills learned =><br><br>
-      Powershell<br>  
+      Powershell<br>
       Linux File Systems<br>
       Linux<br>
       Command-Line Interface
+      <span style=" position:absolute;left :650px;
+      top:-0px"><lottie-player src="https://lottie.host/a41416e6-2831-4c2e-a45a-fa146f984283/nZyESLGu44.json" background-color="transparent"  speed="1" style="width: 300px; height: 300px;" loop autoplay></lottie-player></span>
       <div class="box6">
         <img src="cer6.png">
       </div>
@@ -572,19 +732,23 @@
       Directory Service-network and Infrastructure Service<br><br>
       Lightweight Directory Access Protocol (LDAP)<br><br>
       Backup-Data Recovery and Backups
+      <span style=" position:absolute;left :650px;
+      top:-0px"><lottie-player src="https://lottie.host/a23d3766-0699-44f1-85a2-5c66cc3f287a/Lr2AZCfJTL.json" background-color="transparent"  speed="1" style="width: 300px; height: 300px;" loop autoplay></lottie-player></span>
       <div class="box7">
         <img src="cer7.png">
       </div>
   </div>
   <div id="cer8">
-    <h2 style="color: white;
+    <h2 style="color: rgb(0, 0, 0);
       position: absolute;
-      left:15px"><u style="color:greenyellow;">GOOGLE Technical Support Fundamentals Certication From Coursera</u>
+      left:15px"><u style="color:rgb(11, 56, 135);">GOOGLE Technical Support Fundamentals Certication From Coursera</u>
       <br><br>Skills learned =><br><br>
       Binary Code-Hardware based<br>
       Customer Support<br>
       Linux-Operating System<br>
       Troubleshooting
+      <span style=" position:absolute;left :650px;
+      top:-0px"><lottie-player src="https://lottie.host/abd097ed-e182-44e5-974b-3f7fb34d9247/mJyAK07zDJ.json" background-color="transparent"  speed="1" style="width: 300px; height: 300px;" loop autoplay></lottie-player></span>
 
       <div class="box8">
         <img src="cer8.png">
@@ -594,15 +758,48 @@
     <h2 style="color: white;
       position: absolute;
       left:15px"><u style="color:greenyellow;">GOOGLE Computer Networking Certication From Coursera</u>
-      <br><br>Skills learned =><br><br>
-      Domain Name System (DNS)<br>
-      Ipv4-the network layer<br>
+      <br><br>Skills learned =><br>
+      Domain Name System (DNS)<br><br>
+      Ipv4-the network layer<br><br>
       Network Model-Network services<br>
-      Troubleshooting
+      <span style=" position:absolute;left :650px;
+      top:-0px"><lottie-player src="https://lottie.host/c1443717-b1d8-431e-9ee2-b0b19ef695e3/P5aUhj7nC5.json" background-color="transparent"  speed="1" style="width: 300px; height: 300px;" loop autoplay></lottie-player></span>
       <div class="box9">
         <img src="cer9.png">
       </div>
   </div>
+  <div id="cer10">
+    <h2 style="color: white;
+      position: absolute;
+      left:15px"><u style="color:greenyellow;">EC Council-Digital Forensics Essentials Certification From Coursera</u>
+      <br><br>Skills learned =><br><br>
+      Digital Forensics<br><br>
+      Computer Forensics<br><br>
+      
+      <span style=" position:absolute;left :650px;
+      top:-0px"><lottie-player src="https://lottie.host/d927a3a2-d0a6-4d7c-9a61-cad689bc07cc/Wd1WFpmRdy.json" background-color="transparent"  speed="1" style="width: 300px; height: 300px;" loop autoplay></lottie-player></span>
+      <div class="box10">
+        <img src="cer10.png">
+      </div>
+  </div>
+
+  <div id="cer11">
+    <h2 style="color: white;
+      position: absolute;
+      left:15px"><u style="color:greenyellow;">EC Council-Cybersecurity Attack And Defense Fundamentals Certification From Coursera</u>
+      <br><br>Skills learned =><br><br>
+      Cyberattacks<br>
+      Network Defense<br>
+      Digital Forensics<br>
+      Cybersecurity<br>
+      Ethical Hacking
+      <span style=" position:absolute;left :650px;
+      top:-0px"><lottie-player src="https://lottie.host/5c953d74-5e6a-40be-b069-9673ec826c45/P2CchIRKf6.json" background-color="transparent"  speed="1" style="width: 300px; height: 300px;" loop autoplay></lottie-player></span>
+      <div class="box11">
+        <img src="cer11.png">
+      </div>
+  </div>
+
   <div id="arrowAnim">
     <div class="arrowSliding">
       <div class="arrow"></div>
@@ -617,29 +814,35 @@
       <div class="arrow"></div>
     </div>
   </div>
-<div style="border: 10px solid rgb(174, 223, 27);
+  <div style="border: 10px solid rgb(174, 223, 27);
 background-color: white;
 position: absolute;
-top:4800px;
-width:400px;
-height: 100px;
-left: 1000px;">
-<h3 style="position: absolute;
-top: -21px;
+top:5570px;
+width:450px;
+height: 150px;
+left: 950px;">
+    <h3 style="position: absolute;
+top: -5px;
 left:5px;
 font-family: 'Courier New', Courier, monospace;
-font-size: 18px;">
-  If you want to contact me or see my repository/projects visit Main page through contact mediums I am open to connect. <br> Thanks For Visiting..
-</h3>
-</div>
-<a href="http://127.0.0.1:5500/main.html"><button class="btn" style="
+font-size: 20px;">
+      If you want to contact me or see my repository/projects visit Main page through contact mediums I am open to
+      connect. <br> Thanks For Visiting..
+    </h3>
+  </div>
+  <a href="http://127.0.0.1:5500/main.html"><button class="btn" style="
 height: 60px; 
       width: 230px; 
       position: absolute;
-top: 4830px;
-left: 150px;"><b>Main Page</b></button></a>
+top: 5630px;
+left: 120px;"><b>Main Page</b></button></a>
 
   <div class="loader"></div>
+  <span style="position: absolute;
+  top:5700px;
+  left: 1500px;
+  height: 100px;
+  width: 100px;"></span>
 </body>
 <script>
   window.addEventListener("load", () => {
