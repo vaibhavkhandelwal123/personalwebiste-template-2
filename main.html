@@ -1,333 +1,433 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <title>Personal Website</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Personal Website</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <style>
-    .fa {
-  padding: 10px;
-text-align: center;
-  margin: 0px 10px;
-  font-size: 40px;
-  width: 60px;
-  height: 40px;
-}
+  .fa {
+    padding: 10px;
+    text-align: center;
+    margin: 0px 10px;
+    font-size: 40px;
+    width: 60px;
+    height: 40px;
+  }
 
-.fa-twitter {
-  background: #55ACEE;
-  color: white;
-  border-radius: 10px;
-}
-.fa-linkedin {
-  background: #007bb5;
-  color: white;
-  border-radius: 10px;
-}
-.fa-instagram {
-  background: hsl(355, 76%, 64%);
-  color: white;
-  border-radius: 10px;
-}
+  .fa-twitter {
+    background: #55ACEE;
+    color: white;
+    border-radius: 10px;
+  }
 
-.fa-google {
-  background: #dd4b39;
-  color: white;
-  border-radius: 10px;
-}
+  .fa-linkedin {
+    background: #007bb5;
+    color: white;
+    border-radius: 10px;
+  }
 
-.fa-github{
+  .fa-instagram {
+    background: hsl(355, 76%, 64%);
+    color: white;
+    border-radius: 10px;
+  }
+
+  .fa-google {
+    background: #dd4b39;
+    color: white;
+    border-radius: 10px;
+  }
+
+  .fa-github {
     background-color: black;
     color: white;
     border-radius: 10px;
-}
+  }
 
 
-.fa:hover {
+  .fa:hover {
     opacity: 0.9;
-}
-body{
+  }
+
+  body {
     background-color: rgb(18, 18, 70);
-}
-.center1{
+  }
+
+  .center1 {
     height: 100px;
     width: 1520px;
     padding-top: 10px;
     text-align: center;
     animation: myanimation 20s infinite;
     border-radius: 10px;
-}
-@keyframes myanimation {
-  0% {background-color: rgb(248, 236, 236);}
-  5%{background-color:rgb(236, 221, 144) ;}
-  10%{background-color:rgb(179, 238, 127) ;}
-  15%{background-color:rgb(115, 213, 130) ;}
-  20%{background-color:rgb(105, 219, 196) ;}
-  25%{background-color:rgb(92, 146, 207) ;}
-  30%{background-color:rgb(115, 119, 209) ;}
-  35%{background-color:rgb(130, 87, 199) ;}
-  40%{background-color:rgb(216, 100, 226);}
-  45%{background-color:rgb(221, 76, 141);}
-  50%{background-color:rgb(223, 87, 105);}
-  55% {background-color: rgb(196, 29, 29);}
-  60%{background-color:rgb(232, 206, 10) ;}
-  65%{background-color:rgb(114, 235, 8) ;}
-  70%{background-color:rgb(0, 226, 226) ;}
-  85%{background-color:rgb(21, 65, 240) ;}
-  90%{background-color:rgb(217, 17, 187) ;}
-  95%{background-color:rgb(215, 3, 81) ;}
-  100%{background-color:rgb(0, 0, 0) ;}
-}
-.center2 {
-  position: absolute;
-  top: 150px;
-  left: 10px;
-  width: 1495px;
-  height: 540px;
-  border: 10px solid #922be7;
-  border-radius: 20px;
-}
-.main{
-        width: 100vw;
-        height: 100vh;
-        display: grid;
-        grid-template-columns: 1fr;
-        place-items: center;
-    }
- 
-    .btn {
-        padding: 0.5em 1em;
-        background-color: #0ebac5;
-        border: none;
-        user-select: none;
-        cursor: pointer;
-        font-size: 20px;
-        text-transform: uppercase;
-        transition: all 0.5s linear;
-        color: #fff;
-        position: relative;
-        box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-    }
- 
-    .btn:hover::after, .btn:hover::before {
-        content: '';
-        background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%);
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        inset: 0;
-        z-index: -1;
- 
-        animation: move-right-side 1s ease infinite;
-    }
- 
-    .btn:hover::before {
-        background: linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%);
-        inset: 0;
-        animation: move-left-side 1s ease infinite;
-        z-index: -2;
-    }
- 
-    .btn:hover {
-        background-color: #fff;
-        color: #00C9FF;
-    }
- 
-    @keyframes move-right-side {
-        0% {
-            inset: 0.3em 0 0 0.3em;
-        }
- 
-        33% {
-            inset: 0 0.3em 0.3em 0;
-        }
-            
-        66% {
-            inset: 1em 0 0 0.5em;
-        }
- 
-        100% {
-            inset:0  1em 0.5em 0;
-        }
-    }
- 
-    @keyframes move-left-side {
-        0% {
-            right: -1em;
-            top: -0.5em;
-        }
- 
-        33% {
-            bottom: -1em;
-            left: -0.5em;
-        }
- 
-        66% {
-            top: 0;
-            right:-0.7;
-        }
- 
-        100% {
-            right: -1em;
-            top: -0.5em;
-        }
-    }
-    #arrowAnim {
-  width: 90vw;
-  height: 60vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+  }
 
-.arrow {
-  width: 1vw;
-  height: 1vw;
-  border: 2.5vw solid;
-  border-color: rgb(255, 255, 255) transparent transparent rgb(0, 0, 0);
-  transform: rotate(-45deg);
-}
+  @keyframes myanimation {
+    0% {
+      background-color: rgb(248, 236, 236);
+    }
+
+    5% {
+      background-color: rgb(236, 221, 144);
+    }
+
+    10% {
+      background-color: rgb(179, 238, 127);
+    }
+
+    15% {
+      background-color: rgb(115, 213, 130);
+    }
+
+    20% {
+      background-color: rgb(105, 219, 196);
+    }
+
+    25% {
+      background-color: rgb(92, 146, 207);
+    }
+
+    30% {
+      background-color: rgb(115, 119, 209);
+    }
+
+    35% {
+      background-color: rgb(130, 87, 199);
+    }
+
+    40% {
+      background-color: rgb(216, 100, 226);
+    }
+
+    45% {
+      background-color: rgb(221, 76, 141);
+    }
+
+    50% {
+      background-color: rgb(223, 87, 105);
+    }
+
+    55% {
+      background-color: rgb(196, 29, 29);
+    }
+
+    60% {
+      background-color: rgb(232, 206, 10);
+    }
+
+    65% {
+      background-color: rgb(114, 235, 8);
+    }
+
+    70% {
+      background-color: rgb(0, 226, 226);
+    }
+
+    85% {
+      background-color: rgb(21, 65, 240);
+    }
+
+    90% {
+      background-color: rgb(217, 17, 187);
+    }
+
+    95% {
+      background-color: rgb(215, 3, 81);
+    }
+
+    100% {
+      background-color: rgb(0, 0, 0);
+    }
+  }
+
+  .center2 {
+    position: absolute;
+    top: 150px;
+    left: 10px;
+    width: 1495px;
+    height: 540px;
+    border: 10px solid #922be7;
+    border-radius: 20px;
+  }
+
+  .main {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+  }
+
+  .btn {
+    padding: 0.5em 1em;
+    background-color: #0ebac5;
+    border: none;
+    user-select: none;
+    cursor: pointer;
+    font-size: 20px;
+    text-transform: uppercase;
+    transition: all 0.5s linear;
+    color: #fff;
+    position: relative;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  }
+
+  .btn:hover::after,
+  .btn:hover::before {
+    content: '';
+    background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    border-radius: 10px;
+    animation: move-right-side 1s ease infinite;
+  }
+
+  .btn:hover::before {
+    background: linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%);
+    inset: 0;
+    animation: move-left-side 1s ease infinite;
+    z-index: -2;
+  }
+
+  .btn:hover {
+    background-color: #fff;
+    color: #00C9FF;
+  }
+
+  @keyframes move-right-side {
+    0% {
+      inset: 0.3em 0 0 0.3em;
+    }
+
+    33% {
+      inset: 0 0.3em 0.3em 0;
+    }
+
+    66% {
+      inset: 1em 0 0 0.5em;
+    }
+
+    100% {
+      inset: 0 1em 0.5em 0;
+    }
+  }
+
+  @keyframes move-left-side {
+    0% {
+      right: -1em;
+      top: -0.5em;
+    }
+
+    33% {
+      bottom: -1em;
+      left: -0.5em;
+    }
+
+    66% {
+      top: 0;
+      right: -0.7;
+    }
+
+    100% {
+      right: -1em;
+      top: -0.5em;
+    }
+  }
+
+  #arrowAnim {
+    width: 90vw;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .arrow {
+    width: 1vw;
+    height: 1vw;
+    border: 2.5vw solid;
+    border-color: rgb(255, 255, 255) transparent transparent rgb(0, 0, 0);
+    transform: rotate(-45deg);
+  }
 
 
-.arrowSliding {
-  position: absolute;
-  -webkit-animation: slide 4s linear infinite; 
-          animation: slide 4s linear infinite;
-}
+  .arrowSliding {
+    position: absolute;
+    -webkit-animation: slide 4s linear infinite;
+    animation: slide 4s linear infinite;
+  }
 
-.delay1 {
-  -webkit-animation-delay: 1s; 
+  .delay1 {
+    -webkit-animation-delay: 1s;
     animation-delay: 1s;
-}
-.delay2 {
-  -webkit-animation-delay: 2s; 
+  }
+
+  .delay2 {
+    -webkit-animation-delay: 2s;
     animation-delay: 2s;
-}
-.delay3 {
-  -webkit-animation-delay: 3s; 
+  }
+
+  .delay3 {
+    -webkit-animation-delay: 3s;
     animation-delay: 3s;
-}
-
-@-webkit-keyframes slide {
-    0% { opacity:0; transform: translateX(15vw); }	
-   20% { opacity:1; transform: translateX(9vw); }	
-   80% { opacity:1; transform: translateX(-9vw); }	
-  100% { opacity:0; transform: translateX(-15vw); }	
-}
-@keyframes slide {
-    0% { opacity:0; transform: translateX(15vw); }	
-   20% { opacity:1; transform: translateX(9vw); }	
-   80% { opacity:1; transform: translateX(-9vw); }	
-  100% { opacity:0; transform: translateX(-15vw); }	
-}
-.loader{
-  position: fixed;
-  top:0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: white;
-  transition:opacity 2s, visibility 1.5s;
-}
-
-.loader-hidden{
-  opacity: 0;
-  visibility: hidden;
-}
-
-.loader::after{
-  content: "";
-  width: 75px;
-  height: 75px;
-  border: 15px solid #dddddd;
-  border-top-color: #18e430;
-  border-bottom-color: #581093;
-  border-left-color: blue;
-  border-right-color: red;
-  border-radius: 100%;
-  animation: loading 0.75s ease infinite;
-}
-
-@keyframes loading{
-  from{
-    transform: rotate(0turn);
   }
-  to{
-    transform: rotate(1turn);
+
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateX(15vw);
+    }
+
+    20% {
+      opacity: 1;
+      transform: translateX(9vw);
+    }
+
+    80% {
+      opacity: 1;
+      transform: translateX(-9vw);
+    }
+
+    100% {
+      opacity: 0;
+      transform: translateX(-15vw);
+    }
   }
-}
+
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateX(15vw);
+    }
+
+    20% {
+      opacity: 1;
+      transform: translateX(9vw);
+    }
+
+    80% {
+      opacity: 1;
+      transform: translateX(-9vw);
+    }
+
+    100% {
+      opacity: 0;
+      transform: translateX(-15vw);
+    }
+  }
+
+  .loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    transition: opacity 2s, visibility 1.5s;
+  }
+
+  .loader-hidden {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .loader::after {
+    content: "";
+    width: 75px;
+    height: 75px;
+    border: 15px solid #dddddd;
+    border-top-color: #18e430;
+    border-bottom-color: #581093;
+    border-left-color: blue;
+    border-right-color: red;
+    border-radius: 100%;
+    animation: loading 0.75s ease infinite;
+  }
+
+  @keyframes loading {
+    from {
+      transform: rotate(0turn);
+    }
+
+    to {
+      transform: rotate(1turn);
+    }
+  }
 </style>
+
 <body>
-    <div class="center1">
-      <h1 style="font-size: 100px;
+  <div class="center1">
+    <h1 style="font-size: 100px;
       position: absolute;
       top: -60px;
       left: 15%;
-      background-image: url(bg.jpg);
+      background-image: url(bg.gif);
       background-size: cover;
       background-position: center;
       background-clip: text;
       -webkit-background-clip: text;
       color: transparent;">PERSONAL WEBSITE</h1>
-    </div>
-    <div class="center2">
-      <h1 style="color: rgb(113, 183, 245);
+  </div>
+  <div class="center2">
+    <h1 style="color: rgb(113, 183, 245);
       position: absolute;
-      left: 29px;" > CERTIFICATES and SKILLS</h1>
-      <img src="cer1.png" 
-      style="height: 150px; 
+      left: 29px;"> CERTIFICATES and SKILLS</h1>
+    <img src="cer1.png" style="height: 150px; 
       top:90px; 
       left:30px; 
       position: absolute; 
       filter: blur(1px);">
-      <a href="http://127.0.0.1:5500/explore.html"><button class="btn" 
-      style="left:25px; 
+    <a href="http://127.0.0.1:5500/explore.html"><button class="btn" style="left:25px; 
       height: 60px; 
       width: 230px; 
       position: absolute; 
       top:280px; 
       border-radius: 10px;">
-      <b>
-        <h2 style="position: absolute; 
+        <b>
+          <h2 style="position: absolute; 
         top: -14px;left:25px">Explore -->
-        </h2>
-      </b>
-    </button></a>
+          </h2>
+        </b>
+      </button></a>
     <div id="arrowAnim">
-        <div class="arrowSliding">
-          <div class="arrow"></div>
-        </div>
-        <div class="arrowSliding delay1">
-          <div class="arrow"></div>
-        </div>
-        <div class="arrowSliding delay2">
-          <div class="arrow"></div>
-        </div>
-        <div class="arrowSliding delay3">
-          <div class="arrow"></div>
-        </div>
+      <div class="arrowSliding">
+        <div class="arrow"></div>
       </div>
-      <h1 style="color: aqua;
+      <div class="arrowSliding delay1">
+        <div class="arrow"></div>
+      </div>
+      <div class="arrowSliding delay2">
+        <div class="arrow"></div>
+      </div>
+      <div class="arrowSliding delay3">
+        <div class="arrow"></div>
+      </div>
+    </div>
+    <h1 style="color: aqua;
       position: absolute;
       top:320px;
       left:610px">Contact mediums
-      </h1>
-      <span style="position: absolute;
+    </h1>
+    <span style="position: absolute;
       top:410px;
       left:470px">
-                <a href="https://twitter.com/Vaibhav98026032" class="fa fa-twitter"> </a>
-               
-                <a href="https://www.linkedin.com/in/vaibhav-khandelwal-413447234/" class="fa fa-linkedin"> </a>
+      <a href="https://twitter.com/Vaibhav98026032" class="fa fa-twitter"> </a>
 
-                <a href="khandelwalvaibhav123456@gmail.com" class="fa fa-google"> </a>
-                
-                <a href="https://www.instagram.com/vaibhav___khandelwal/?next=%2F&hl=en" class="fa fa-instagram"></a>
-                <a href="https://github.com/vaibhavkhandelwal123" class="fa fa-github"></a>
-            </span>
-            <div style="background-color: rgb(255, 255, 255);
+      <a href="https://www.linkedin.com/in/vaibhav-khandelwal-413447234/" class="fa fa-linkedin"> </a>
+
+      <a href="khandelwalvaibhav123456@gmail.com" class="fa fa-google"> </a>
+
+      <a href="https://www.instagram.com/vaibhav___khandelwal/?next=%2F&hl=en" class="fa fa-instagram"></a>
+      <a href="https://github.com/vaibhavkhandelwal123" class="fa fa-github"></a>
+    </span>
+    <div style="background-color: rgb(255, 255, 255);
             position: absolute;
             height: 300px;
             width: 240px;
@@ -335,41 +435,58 @@ body{
             right: 100px;
             border:10px solid rgb(225, 93, 255);
             border-radius: 10px; ">
-            <img src="image.png" 
-            style="height: 300px;
+      <img src="image.png" style="height: 300px;
             top:0px;
             right: 1px;
             position:absolute;">
-            </div>
-            <div style="background-color: rgb(255, 255, 255);
+    </div>
+    <div style="background-color: rgb(255, 255, 255);
             position: absolute;
             height: 44px;
             width:30px;
             top:168px;
             right: 262px;
             border-radius: 100px;"></div>
-            <h2 style="color: white;
+    <h2 style="color: white;
             position: absolute;
             top:380px;
             right: 5px;
             height: 90px;
             width: 330px;
             ">
-              Vaibhav khandelwal <br>
-              <span style="position: absolute;
+      Vaibhav khandelwal <br>
+      <span style="position: absolute;
               left:70px">Student</span>
-        </h2>
-    </div>
-    <div class="loader"></div>
+    </h2>
+  </div>
+  <div class="loader"></div>
 </body>
 <script>
-  window.addEventListener("load",()=>{
-    const loader=document.querySelector(".loader");
+  window.addEventListener("load", () => {
+    const loader = document.querySelector(".loader");
     loader.classList.add("loader-hidden");
-    loader.addEventListener("transitionend",()=>{
+    loader.addEventListener("transitionend", () => {
       document.body.removeChild("loader");
     })
   })
-  
+  function setCookie() {
+      document.cookie = "username=John Doe; expires=Thu, 18 Dec 2013 12:00:00 UTC; path=/";
+    }
+
+    function readCookie() {
+      const username = document.cookie.match('username=([^;]+)');
+      if (username) {
+        document.getElementById('cookie-value').innerHTML = username[1];
+      } else {
+        document.getElementById('cookie-value').innerHTML = 'Cookie does not exist.';
+      }
+    }
+
+    function deleteCookie() {
+      document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
+      document.getElementById('cookie-value').innerHTML = 'Cookie deleted.';
+    }
+
 </script>
+
 </html>
